@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/dashboard": "pages/dashboard.js",
+  "/food-order": "pages/food-order.js",
+  "/message": "pages/message.js",
+  "/orders": "pages/orders.js",
+  "/bills": "pages/bills.js",
+  "/profile": "pages/profile.js",
+  "/settings": "pages/settings.js"
+}

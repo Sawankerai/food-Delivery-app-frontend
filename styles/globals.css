@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEIGHT FIX */
+html,
+body,
+#__next {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* BODY */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f8f7ff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* NEXT ROOT */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sora', sans-serif;
+  line-height: 1.2;
+}
+
+/* RESPONSIVE IMAGE */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* INPUT */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* HIDE SCROLLBAR */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* GRADIENT */
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #f093fb 100%
+  );
+}
+
+/* CARD HOVER */
+.card-hover {
+  transition: 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.12);
+}
+
+/* INPUT FOCUS */
+input:focus {
+  outline: none;
+}
+
+/* SIDEBAR ICON */
+.sidebar-icon {
+  transition: 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.08);
+}
+
+/* CHECKBOX */
+.checkbox-custom:checked {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+/* PULSE */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #7c3aed;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* RESPONSIVE TEXT */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* MOBILE LAYOUT FIX
+   Sidebar becomes an off-canvas drawer below 768px (handled in Sidebar.js).
+   These rules make sure the main page content no longer reserves space
+   for the sidebar and that side-by-side grids stack on small screens. */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0 !important;
+    padding: 16px !important;
+  }
+
+  .food-order-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
