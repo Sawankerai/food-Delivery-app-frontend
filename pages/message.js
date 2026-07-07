@@ -259,6 +259,7 @@ export default function Message() {
     <div style={{ display: "flex", minHeight: "100vh", background: "#fdf6ec" }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} active={active} setActive={setActive} />
       <main
+        className="main-content"
         style={{
           flex: 1,
           marginLeft: collapsed ? "78px" : "260px",
@@ -278,6 +279,7 @@ export default function Message() {
         </div>
 
         <div
+          className="message-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "280px minmax(0, 1fr)",

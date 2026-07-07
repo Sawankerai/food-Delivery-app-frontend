@@ -29,6 +29,7 @@ export default function Favorite() {
     <div style={{ display: "flex", minHeight: "100vh", background: "#fdf6ec" }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} active={active} setActive={setActive} />
       <main
+        className="main-content"
         style={{
           flex: 1,
           marginLeft: collapsed ? "78px" : "260px",

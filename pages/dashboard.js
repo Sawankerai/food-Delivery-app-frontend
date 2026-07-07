@@ -125,7 +125,7 @@ export default function Dashboard() {
     <div style={{ display: "flex", minHeight: "100vh", background: "linear-gradient(135deg, #fdf6ec 0%, #fef9f3 50%, #fff5ee 100%)" }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} active={active} setActive={setActive} />
 
-      <main style={{
+      <main className="main-content" style={{
         flex: 1,
         marginLeft: collapsed ? "78px" : "260px",
         transition: "margin-left 0.35s cubic-bezier(0.4,0,0.2,1)",
@@ -341,7 +341,7 @@ export default function Dashboard() {
           }} />
 
           <div style={{
-            position: "relative", width: "420px", height: "100vh",
+            position: "relative", width: "420px", maxWidth: "100vw", height: "100vh",
             background: "white", boxShadow: "-8px 0 40px rgba(0,0,0,0.15)",
             display: "flex", flexDirection: "column", zIndex: 201,
           }}>

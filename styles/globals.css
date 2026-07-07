@@ -182,10 +182,18 @@ input:focus {
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0 !important;
-    padding: 16px !important;
+    padding: 70px 16px 16px 16px !important;
   }
 
   .food-order-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .message-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bills-grid {
     grid-template-columns: 1fr !important;
   }
 }

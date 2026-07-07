@@ -62,6 +62,7 @@ export default function Bills() {
     <div style={{ display: "flex", minHeight: "100vh", background: "#fdf6ec" }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} active={active} setActive={setActive} />
       <main
+        className="main-content"
         style={{
           flex: 1,
           marginLeft: collapsed ? "78px" : "260px",
@@ -84,6 +85,7 @@ export default function Bills() {
 
         {cart.length > 0 ? (
           <section
+            className="bills-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "minmax(0, 1fr) 360px",
