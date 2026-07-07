@@ -1,4 +1,4 @@
-# Finnger Dashboard — Next.js App
+# Food Delivery  Dashboard — Next.js App
 
 A pixel-perfect Next.js frontend with Login/Signup page, Dashboard, and Permission Settings — built with Tailwind CSS.
 
