@@ -39,9 +39,9 @@ export default function Settings() {
   };
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", backgroundColor: "#f9fafb" }}>
+    <div className="settings-container" style={{ display: "flex", minHeight: "100vh", backgroundColor: "#f9fafb" }}>
       {/* Sidebar */}
-      <aside style={{
+      <aside className="settings-sidebar" style={{
         width: "220px",
         borderRight: "1px solid #e5e7eb",
         padding: "2rem 1rem",
@@ -73,7 +73,7 @@ export default function Settings() {
       </aside>
 
       {/* Main Content */}
-      <main style={{ flex: 1, padding: "2rem", maxWidth: "640px" }}>
+      <main className="settings-main" style={{ flex: 1, padding: "2rem", maxWidth: "640px" }}>
 
         {/* ── PROFILE ── */}
         {activeTab === "Profile" && (
@@ -81,7 +81,7 @@ export default function Settings() {
             <h1 style={{ fontSize: "20px", fontWeight: "600", margin: "0 0 4px" }}>Profile</h1>
             <p style={{ color: "#6b7280", margin: "0 0 2rem" }}>Manage your personal information.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+              <div className="settings-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
                 <div>
                   <label style={labelStyle}>First name</label>
                   <input type="text" placeholder="John" value={profile.firstName}
@@ -199,7 +199,7 @@ export default function Settings() {
                   onChange={(e) => setBilling({ ...billing, cardNumber: e.target.value })}
                   style={inputStyle} />
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+              <div className="settings-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
                 <div>
                   <label style={labelStyle}>Expiry date</label>
                   <input type="text" placeholder="MM/YY" value={billing.expiry}

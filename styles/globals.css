@@ -196,4 +196,36 @@ input:focus {
   .bills-grid {
     grid-template-columns: 1fr !important;
   }
+
+  .settings-container {
+    flex-direction: column !important;
+  }
+
+  .settings-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    padding: 12px !important;
+  }
+
+  .settings-sidebar nav {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+  }
+
+  .settings-sidebar nav button {
+    white-space: nowrap !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .settings-main {
+    padding: 16px !important;
+    max-width: 100% !important;
+  }
+
+  .settings-two-col {
+    grid-template-columns: 1fr !important;
+  }
 }
